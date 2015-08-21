@@ -1,0 +1,43 @@
+@import "../../helpers/*.css";
+
+.paginator {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    margin: -95px 0 0;
+    height: 190px;
+    z-index: 10;
+    &_dark {
+        & .paginator {
+            &__slide {
+                border-color: $black-light;
+                background-color: color($green-current a(0%));
+                &:hover,
+                &_current {
+                    border-color: $green-current;
+                    background-color: color($green-current a(100%));
+                    }
+                }
+            }
+        }
+
+    &__slide {
+        @mixin clear_button;
+        cursor: pointer;
+        width: 10px;
+        height: 10px;
+        display: block;
+        border: 1px solid $white;
+        border-radius: 100%;
+        background-color: color($white a(0%));
+        transition: background-color .25s, border-color .25s;
+        margin: 20px 0 0;
+        &:first-child {
+            margin: 0;
+            }
+        &:hover,
+        &_current {
+            background-color: color($white a(100%));
+            }
+        }
+    }

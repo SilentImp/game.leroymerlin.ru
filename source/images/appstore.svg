@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="115px" height="33px" viewBox="0 0 115 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>Available on the + App Store + apple copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Screen_6" sketch:type="MSArtboardGroup" transform="translate(-301.000000, -740.000000)" fill="#FFFFFF">
+            <g id="buttons" sketch:type="MSLayerGroup" transform="translate(260.000000, 672.000000)">
+                <g id="Available-on-the-+-App-Store" transform="translate(0.000000, 54.000000)">
+                    <g id="Available-on-the-+-App-Store-+-apple-copy" transform="translate(41.000000, 14.000000)">
+                        <text id="Available-on-the" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="12" font-weight="normal" letter-spacing="0.239999995">
+                            <tspan x="27" y="9">Available on the</tspan>
+                        </text>
+                        <text id="App-Store" sketch:type="MSTextLayer" font-family="Myriad Pro" font-size="22.8765961" font-weight="normal" letter-spacing="-0.809999883">
+                            <tspan x="27" y="28">App Store</tspan>
+                        </text>
+                        <g id="apple-copy" transform="translate(0.514286, 4.000000)" sketch:type="MSShapeGroup">
+                            <path d="M15.6718193,12.2121558 C15.6456033,9.3054295 18.0574736,7.89129767 18.1677615,7.82546117 C16.8018185,5.83864202 14.684652,5.56717921 13.9406605,5.54553434 C12.1624938,5.35884729 10.437663,6.60703508 9.53185565,6.60703508 C8.60796831,6.60703508 7.21309731,5.56357173 5.70974638,5.59423531 C3.77518777,5.62399701 1.96538106,6.74141368 0.972789769,8.47661116 C-1.07567277,12.0146464 0.45208614,17.2139257 2.41466874,20.0737548 C3.39641204,21.4752605 4.54358722,23.0382008 6.04513015,22.9831868 C7.5141291,22.9236634 8.0628567,22.0488497 9.83559944,22.0488497 C11.5920702,22.0488497 12.1073498,22.9831868 13.6387247,22.947112 C15.2152996,22.9236634 16.2078909,21.541097 17.1552822,20.1269651 C18.2898014,18.5234406 18.7454171,16.9406592 18.7634971,16.8594909 C18.7273371,16.8477666 15.7025552,15.6960788 15.6718193,12.2121558" id="Fill-2"></path>
+                            <path d="M12.7416136,3.68774558 C13.5317091,2.7020019 14.0723007,1.36092152 13.9222368,0 C12.7786776,0.0505047083 11.3485506,0.789136068 10.5250072,1.75323487 C9.79638374,2.60279622 9.14550421,3.99528318 9.31364809,5.30479811 C10.5982312,5.40039631 11.9171662,4.65815747 12.7416136,3.68774558" id="Fill-3"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

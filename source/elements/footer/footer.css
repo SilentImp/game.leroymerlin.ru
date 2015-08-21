@@ -1,0 +1,89 @@
+@import "../../helpers/*.css";
+
+.footer {
+    background-color: $grey;
+    padding: 45px 20px;
+
+    &__navigation {
+        @mixin clear;
+        float: left;
+        width: 170px;
+        padding: 0 20px 0 0;
+        margin: 0 0 43px;
+        }
+
+    &__link {
+        float: left;
+        clear: both;
+        line-height: 17px;
+        font-size: 15px;
+        margin: 0 0 17px;
+        color: $white;
+        text-decoration: none;
+        font-weight: 200;
+        transition: color .25s;
+        &:hover {
+            color: $green-hover;
+            }
+        }
+
+    &__social {
+        position: absolute;
+        right: 0;
+        top: 0;
+        &-link {
+            float: left;
+            width: 45px;
+            height: 45px;
+            border-radius: 100%;
+            background-color: $grey-social;
+            transition: background-color .25s;
+            margin: 0 0 0 9px;
+            text-align: center;
+            font-size: 0;
+            line-height: 45px;
+            &:hover {
+                background-color: $green-hover;
+                }
+            &_fb:before {
+                @mixin icon "\ea07";
+                font-size: 21px;
+                }
+            &_tw:before {
+                @mixin icon "\ea05";
+                font-size: 21px;
+                }
+            &_vk:before {
+                @mixin icon "\ea04";
+                font-size: 21px;
+                }
+            &_yt:before {
+                @mixin icon "\ea06";
+                font-size: 21px;
+                }
+            &:before {
+                color: $grey;
+                line-height: 45px;
+                vertical-align: middle;
+                font-size: 24px;
+                }
+            }
+        }
+
+    &__wrapper {
+        height: 300px;
+        max-width: 1260px;
+        margin: 0 auto;
+        position: relative;
+        }
+
+    &__copyright {
+        clear: both;
+        padding: 30px 0 0;
+        border-top: 1px solid $grey-border;
+        font-size: 11px;
+        line-height: 20px;
+        color: color($white a(50%));
+        font-weight: 200;
+        }
+    }

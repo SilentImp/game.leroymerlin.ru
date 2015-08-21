@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="98px" height="98px" viewBox="0 0 98 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>play</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Screen_1" sketch:type="MSArtboardGroup" transform="translate(-671.000000, -409.000000)">
+            <g id="play" sketch:type="MSLayerGroup" transform="translate(675.000000, 413.000000)">
+                <circle id="Oval-66" stroke="#FFFFFF" stroke-width="4" sketch:type="MSShapeGroup" cx="45" cy="45" r="45"></circle>
+                <path d="M36.056927,24.2352254 C35.1410982,23.4714345 33.75,24.1226622 33.75,25.3151884 L33.75,67.7025666 C33.75,68.8950929 35.1410982,69.5463205 36.056927,68.7825296 L61.4693661,47.5888405 C62.1434634,47.0266509 62.1434634,45.9911042 61.4693661,45.4289146 L36.056927,24.2352254 L36.056927,24.2352254 Z" id="Rectangle-1175" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>
