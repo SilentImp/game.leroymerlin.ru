@@ -106,10 +106,28 @@
 
 @media (max-width: 850px) {
     html body .apps {
-        right: 30px;
+        right: 40px;
         left: auto;
         &__text {
             display: none;
+            }
+        }
+    }
+
+@media (max-width: 500px) {
+    html body .apps {
+        bottom: 10px;
+        right: 40px;
+        line-height: 25px;
+        &__link {
+            width: 25px;
+            height: 25px;
+            line-height: 23px;
+            margin: 0 5px;
+            &:before{
+                font-size: 12px;
+                line-height: 23px;
+                }
             }
         }
     }

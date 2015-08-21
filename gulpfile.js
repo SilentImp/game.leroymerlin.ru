@@ -159,7 +159,7 @@ gulp.task('build', function () {
   return gulp.src('build/**')
     .pipe(plumber())
     .pipe(build({
-      branch:     'master',
+      branch:     'gh-pages',
       cacheDir:   'gh-cache',
       remoteUrl:  'git@github.com:SilentImp/game.leroymerlin.ru.git'
     }).on('error', function(){

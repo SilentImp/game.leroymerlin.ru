@@ -2,13 +2,12 @@
 
 .slide {
     height: 100vh;
-    min-height: 800px;
     width: 100%;
     overflow: hidden;
     position: relative;
     line-height: 100vh;
     text-align: center;
-    padding: 0 50px;
+    padding: 0 30px;
     box-sizing: border-box;
     &_white {
         background: $white;
@@ -135,7 +134,6 @@
             &__wrapper{
                 text-align: center;
                 height: 100vh;
-                min-height: 800px;
                 box-sizing: border-box;
                 position: relative;
                 }
@@ -171,6 +169,7 @@
                 }
             &__devices {
                 max-width: 100%;
+                max-height: calc(100vh - 335px);
                 margin: 0 0 30px;
                 }
             &__subtitle {
@@ -279,7 +278,6 @@
             display: block;
             width: 50%;
             height: 100vh;
-            min-height: 800px;
             background: url(../images/conv-1.svg) 100% 50% no-repeat;
             background-size: auto 100%;
             position: absolute;
@@ -295,7 +293,6 @@
             display: block;
             width: 50%;
             height: 100vh;
-            min-height: 800px;
             background: url(../images/conv-2.svg) 100% 50% no-repeat;
             background-size: auto 100%;
             position: absolute;
@@ -311,7 +308,6 @@
             display: block;
             width: 50%;
             height: 100vh;
-            min-height: 800px;
             background: url(../images/conv-3.svg) 100% 50% no-repeat;
             background-size: auto 100%;
             position: absolute;
@@ -391,7 +387,7 @@
         }
     }
 
-@media (max-width: 501px) and (max-width: 850px) {
+@media (min-width: 501px) and (max-width: 850px) {
     html body .slide {
         &__screen {
             top: 90px;
@@ -427,6 +423,9 @@
         &_5,
         &_6 {
             .slide {
+                &__wrapper{
+                    padding: 0;
+                    }
                 &__subtitle,
                 &__title {
                     font-size: 36px;
@@ -448,7 +447,7 @@
                     width: 100%;
                     position: relative;
                     max-width: initial;
-                    padding: 110px 0;
+                    padding: 0;
                     &:before {
                         display: none;
                         }
@@ -459,8 +458,7 @@
     }
 
 @media (max-width: 500px) {
-    html body .slide{
-        /*min-height: initial;*/
+    html body .slide.slide{
         &__play {
             line-height: 36px;
             height: 40px;
@@ -469,15 +467,15 @@
             width: 120px;
             border-radius: 30px;
             padding: 0 20px;
-            margin: 14px;
+            margin: 0 0 14px;
             border-width: 2px;
             }
         &__screen {
             top: 70px;
             }
         &__wrapper {
-            /*padding-top: 60px;*/
-            /*min-height: initial;*/
+            box-sizing: border-box;
+            padding: 0;
             }
 
         &_1 {
@@ -506,12 +504,15 @@
         &_4,
         &_5,
         &_6 {
+            p {
+                font-size: 12px;
+                display: block;
+                line-height: 14px;
+                margin: 0 0 14px;
+                }
             .slide {
-                p {
-                    font-size: 12px;
-                    display: block;
-                    line-height: 14px;
-                    margin: 0 0 14px;
+                &__wrapper {
+                    padding: 0;
                     }
                 &__list {
                     &-item {
@@ -548,10 +549,455 @@
                     width: 100%;
                     position: relative;
                     max-width: initial;
-                    padding: 110px 0;
                     &:before {
                         display: none;
                         }
+                    }
+                }
+            }
+        }
+    }
+
+
+html.limit-600-900 body .slide {
+    &_6 .slide{
+        &__subtitle {
+            font-size: 16px;
+            line-height: 18px;
+            color: $black;
+            margin: 0 0 20px;
+            }
+        &__devices {
+            max-width: 100%;
+            max-height: calc(100vh - 435px);
+            margin: 0 0 30px;
+            }
+        }
+    &_2,
+    &_3,
+    &_4,
+    &_5 {
+        .slide{
+            &__link {
+                height: 40px;
+                line-height: 40px;
+                font-size: 12px;
+                margin: 0 10px 10px;
+                width: 140px;
+                white-space: nowrap;
+                background-size: 60% 60%;
+                &:before{
+                    margin: 0 5px 0 0;
+                    font-size: 14px;
+                    }
+                }
+            &__subtitle,
+            &__title {
+                font-size: 40px;
+                line-height: 56px;
+                margin: 0 0 20px;
+                }
+            &__list {
+                &-item {
+                    padding: 0 0 0 50px;
+                    background-size: 30px auto;
+                    background-position: 0 0;
+                    min-height: 30px;
+                    line-height: 24px;
+                    height: auto;
+                    p {
+                        font-size: 18px;
+                        display: block;
+                        line-height: 24px;
+                        margin: 0 0 20px;
+                        max-width: 630px;
+                        }
+                    }
+                }
+            &__play {
+                line-height: 56px;
+                height: 60px;
+                font-size: 18px;
+                display: block;
+                width: 200px;
+                border-radius: 30px;
+                padding: 0 40px;
+                margin: 0 0 20px;
+                border-width: 2px;
+                }
+            p {
+                font-size: 18px;
+                display: block;
+                line-height: 24px;
+                margin: 0 0 20px;
+                }
+            }
+        }
+    }
+
+html.limit-600 body .slide {
+    &__screen {
+        top: 90px;
+        bottom: 160px;
+        }
+    &__wrapper {
+        padding-top: 60px;
+        }
+    &_6 .slide{
+        &__title {
+            font-size: 24px;
+            line-height: 36px;
+            }
+        &__subtitle {
+            font-size: 12px;
+            line-height: 14px;
+            color: $black;
+            margin: 0 0 14px;
+            }
+        &__devices {
+            display: none;
+            }
+        &__navigation {
+            width: 160px;
+            margin: auto;
+            }
+        &__link {
+            float: left;
+            height: 60px;
+            width: 60px;
+            margin: 0 5px 10px;
+            font-size: 0;
+            position: relative;
+            text-indent: -9999px;
+            background-image: none;
+
+            &:before {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+                line-height: 60px;
+                font-size: 24px;
+                text-indent: 0;
+                margin: 0;
+                }
+
+            &_vk {
+                clear: both;
+                }
+
+            &_appstore {
+                &:before{
+                    @mixin icon "\ea02";
+                    font-size: 24px;
+                    line-height: 60px;
+                    }
+                }
+            &_googleplay {
+                &:before{
+                    @mixin icon "\ea01";
+                    font-size: 24px;
+                    line-height: 60px;
+                    }
+                }
+            }
+        }
+    &_1 {
+        .slide{
+            &__video {
+                width: 50px;
+                height: 50px;
+                background-size: contain;
+                }
+            &__play {
+                line-height: 36px;
+                height: 40px;
+                font-size: 16px;
+                display: block;
+                width: 120px;
+                border-radius: 30px;
+                padding: 0 20px;
+                margin: 0 auto;
+                border-width: 2px;
+                bottom: 90px;
+                }
+            &__subtitle,
+            &__title {
+                font-size: 24px;
+                line-height: 36px;
+                }
+            }
+        }
+
+    &_2,
+    &_3,
+    &_4,
+    &_5 {
+        p {
+            font-size: 12px;
+            display: block;
+            line-height: 14px;
+            margin: 0 0 14px;
+            }
+        .slide{
+            &__subtitle,
+            &__title {
+                font-size: 24px;
+                line-height: 36px;
+                margin: 0 0 14px;
+                }
+            &__list {
+                &-item {
+                    padding: 0;
+                    background: none;
+                    height: auto;
+                    line-height: 14px;
+                    list-style: disc;
+                    p {
+                        font-size: 12px;
+                        display: block;
+                        line-height: 14px;
+                        margin: 0 0 14px;
+                        max-width: none;
+                        }
+                    }
+                }
+            &__play {
+                line-height: 36px;
+                height: 40px;
+                font-size: 16px;
+                display: block;
+                width: 120px;
+                border-radius: 20px;
+                padding: 0 14px;
+                margin: 0 0 14px;
+                border-width: 2px;
+                }
+            }
+        }
+    }
+
+@media (min-height: 601px) and (max-height: 900px) {
+    html body .slide {
+        &_6 .slide{
+            &__subtitle {
+                font-size: 16px;
+                line-height: 18px;
+                color: $black;
+                margin: 0 0 20px;
+                }
+            &__devices {
+                max-width: 100%;
+                max-height: calc(100vh - 435px);
+                margin: 0 0 30px;
+                }
+            }
+        &_2,
+        &_3,
+        &_4,
+        &_5 {
+            .slide{
+                &__link {
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 12px;
+                    margin: 0 10px 10px;
+                    width: 140px;
+                    white-space: nowrap;
+                    background-size: 60% 60%;
+                    &:before{
+                        margin: 0 5px 0 0;
+                        font-size: 14px;
+                        }
+                    }
+                &__subtitle,
+                &__title {
+                    font-size: 40px;
+                    line-height: 56px;
+                    margin: 0 0 20px;
+                    }
+                &__list {
+                    &-item {
+                        padding: 0 0 0 50px;
+                        background-size: 30px auto;
+                        background-position: 0 0;
+                        min-height: 30px;
+                        line-height: 24px;
+                        height: auto;
+                        p {
+                            font-size: 18px;
+                            display: block;
+                            line-height: 24px;
+                            margin: 0 0 20px;
+                            max-width: 630px;
+                            }
+                        }
+                    }
+                &__play {
+                    line-height: 56px;
+                    height: 60px;
+                    font-size: 18px;
+                    display: block;
+                    width: 200px;
+                    border-radius: 30px;
+                    padding: 0 40px;
+                    margin: 0 0 20px;
+                    border-width: 2px;
+                    }
+                p {
+                    font-size: 18px;
+                    display: block;
+                    line-height: 24px;
+                    margin: 0 0 20px;
+                    }
+                }
+            }
+        }
+    }
+
+
+@media (max-height: 600px) {
+    html body .slide {
+        &__screen {
+            top: 90px;
+            bottom: 160px;
+            }
+        &__wrapper {
+            padding-top: 60px;
+            }
+        &_6 .slide{
+            &__title {
+                font-size: 24px;
+                line-height: 36px;
+                }
+            &__subtitle {
+                font-size: 12px;
+                line-height: 14px;
+                color: $black;
+                margin: 0 0 14px;
+                }
+            &__devices {
+                display: none;
+                }
+            &__navigation {
+                width: 160px;
+                margin: auto;
+                }
+            &__link {
+                float: left;
+                height: 60px;
+                width: 60px;
+                margin: 0 5px 10px;
+                font-size: 0;
+                position: relative;
+                text-indent: -9999px;
+                background-image: none;
+
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    line-height: 60px;
+                    font-size: 24px;
+                    text-indent: 0;
+                    margin: 0;
+                    }
+
+                &_vk {
+                    clear: both;
+                    }
+
+                &_appstore {
+                    &:before{
+                        @mixin icon "\ea02";
+                        font-size: 24px;
+                        line-height: 60px;
+                        }
+                    }
+                &_googleplay {
+                    &:before{
+                        @mixin icon "\ea01";
+                        font-size: 24px;
+                        line-height: 60px;
+                        }
+                    }
+                }
+            }
+        &_1 {
+            .slide{
+                &__video {
+                    width: 50px;
+                    height: 50px;
+                    background-size: contain;
+                    }
+                &__play {
+                    line-height: 36px;
+                    height: 40px;
+                    font-size: 16px;
+                    display: block;
+                    width: 120px;
+                    border-radius: 30px;
+                    padding: 0 20px;
+                    margin: 0 auto;
+                    border-width: 2px;
+                    bottom: 90px;
+                    }
+                &__subtitle,
+                &__title {
+                    font-size: 24px;
+                    line-height: 36px;
+                    }
+                }
+            }
+
+        &_2,
+        &_3,
+        &_4,
+        &_5 {
+            p {
+                font-size: 12px;
+                display: block;
+                line-height: 14px;
+                margin: 0 0 14px;
+                }
+            .slide{
+                &__subtitle,
+                &__title {
+                    font-size: 24px;
+                    line-height: 36px;
+                    margin: 0 0 14px;
+                    }
+                &__list {
+                    &-item {
+                        padding: 0;
+                        background: none;
+                        height: auto;
+                        line-height: 14px;
+                        list-style: disc;
+                        p {
+                            font-size: 12px;
+                            display: block;
+                            line-height: 14px;
+                            margin: 0 0 14px;
+                            max-width: none;
+                            }
+                        }
+                    }
+                &__play {
+                    line-height: 36px;
+                    height: 40px;
+                    font-size: 16px;
+                    display: block;
+                    width: 120px;
+                    border-radius: 20px;
+                    padding: 0 14px;
+                    margin: 0 0 14px;
+                    border-width: 2px;
                     }
                 }
             }

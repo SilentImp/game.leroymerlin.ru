@@ -41,3 +41,25 @@
             }
         }
     }
+
+@media (max-width: 850px) {
+    html body .paginator {
+        right: 15px;
+        height: 160px;
+        margin: -80px 0 0;
+        &__slide {
+            margin: 15px 0 0;
+            }
+        }
+    }
+
+@media (max-width: 500px) {
+    html body .paginator {
+        right: 10px;
+        height: 130px;
+        margin: -65px 0 0;
+        &__slide {
+            margin: 10px 0 0;
+            }
+        }
+    }

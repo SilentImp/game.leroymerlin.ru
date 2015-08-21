@@ -46,3 +46,17 @@
             }
         }
     }
+
+
+@media (max-width: 500px) {
+    html body .social {
+        &__link {
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            &:before {
+                font-size: 12px;
+                }
+            }
+        }
+    }
