@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico"/>
+    <script src="js/modernizr.js"></script>
+    <script src="js/classList.js/classList.min.js"></script>
+    <script src="js/es5-shim/es5-shim.min.js"></script>
+    <script src="js/es5-shim/es5-sham.min.js"></script>
+    <script src="js/promise-polyfill/Promise.min.js"></script>
+    <script src="js/hammerjs/hammer.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <title>Leroy Merlin Game</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper"><a href="/">
+          <h1 class="header__logotype">Leroy Merlin</h1></a>
+        <nav class="header__navigation"><a href="#" class="header__link">О нас</a><a href="#" class="header__link">Видео</a><a href="#" class="header__link">Вакансии</a><a href="#" class="header__link">Контакты</a></nav>
+      </div>
+    </header>
+    <menu class="paginator">
+      <button type="button" data-slide="1" class="paginator__slide paginator__slide_current"></button>
+      <button type="button" data-slide="2" class="paginator__slide"></button>
+      <button type="button" data-slide="3" class="paginator__slide"></button>
+      <button type="button" data-slide="4" class="paginator__slide"></button>
+      <button type="button" data-slide="5" class="paginator__slide"></button>
+      <button type="button" data-slide="6" class="paginator__slide"></button>
+      <button type="button" data-slide="7" class="paginator__slide"></button>
+    </menu>
+    <nav class="social"><a href="#" class="social__link social__link_ok">одноклассники</a><a href="#" class="social__link social__link_vk">vkontakte</a></nav>
+    <div class="page-wrapper">
+      <div class="page">
+        <div class="slide slide_gold slide_1">
+          <div class="slide__wrapper">
+            <h1 class="slide__title">Гипермаркет</h1>
+            <h2 class="slide__subtitle">Почувствуй игру – будь в команде Леруа Мерлен! </h2>
+            <button type="button" class="slide__video">Играть видео</button>
+            <section data-src="https://www.youtube.com/embed/rQL682f_6fM" class="slide__screen">
+              <button type="button" class="slide__screen-close">Закрыть</button>
+            </section><a href="#" class="slide__play">Играть!</a>
+          </div>
+          <nav class="apps apps_center"><span class="apps__text">Доступно на смартфонах</span><a href="#" class="apps__link apps__link_apple">AppStore</a><a href="#" class="apps__link apps__link_android">Google Play</a><span class="apps__text">и в соцсетях</span><a href="#" class="apps__link apps__link_vk">vkontakte</a><a href="#" class="apps__link apps__link_ok">одноклассники</a></nav>
+        </div>
+        <div class="slide slide_green slide_2">
+          <div class="slide__wrapper">
+            <h1 class="slide__title">Вперед, к вершине рейтинга!</h1>
+            <ul class="slide__list"> 
+              <li class="slide__list-item">
+                <p>Участвуй в игре, бросай вызов и набирай очки за каждый пройденный уровень.</p>
+              </li>
+              <li class="slide__list-item">
+                <p>Соревнуйся с друзьями, прояви настойчивость и окажись на первой строчке рейтинга.</p>
+              </li>
+              <li class="slide__list-item">
+                <p>Стань лидером и получи шанс попасть на собеседование в крупную европейскую компанию. Возможно, мы ждем именно тебя!</p>
+              </li>
+            </ul><a href="#" class="slide__play slide__play_dark">Играть!</a>
+          </div>
+          <nav class="apps"><span class="apps__text">Доступно на смартфонах</span><a href="#" class="apps__link apps__link_apple">AppStore</a><a href="#" class="apps__link apps__link_android">Google Play</a><span class="apps__text">и в соцсетях</span><a href="#" class="apps__link apps__link_vk">vkontakte</a><a href="#" class="apps__link apps__link_ok">одноклассники</a></nav>
+        </div>
+        <div class="slide slide_white slide_3">
+          <div class="slide__wrapper">
+            <h1 class="slide__title">Сотрудник склада</h1>
+            <p>Управляй сложной техникой, познай архитектуру склада, находи нужное среди множества, и все это в режиме ограниченного времени.</p>
+            <p>Ты всегда на шаг впереди? Создай свою стратегию и найди лучшее решение! </p><a href="#" class="slide__play">Играть!</a>
+          </div>
+          <nav class="apps apps_dark"><span class="apps__text">Доступно на смартфонах</span><a href="#" class="apps__link apps__link_apple">AppStore</a><a href="#" class="apps__link apps__link_android">Google Play</a><span class="apps__text">и в соцсетях</span><a href="#" class="apps__link apps__link_vk">vkontakte</a><a href="#" class="apps__link apps__link_ok">одноклассники</a></nav>
+        </div>
+        <div class="slide slide_green slide_4">
+          <div class="slide__wrapper">
+            <h1 class="slide__title">Продавец-консультант</h1>
+            <p>Помогай покупателям, пополняй запасы товаров и организуй работу целого зала! </p>
+            <p>Думаешь, что это просто? Виртуальный магазин в твоем распоряжении! </p><a href="#" class="slide__play slide__play_dark">Играть!</a>
+          </div>
+          <nav class="apps"><span class="apps__text">Доступно на смартфонах</span><a href="#" class="apps__link apps__link_apple">AppStore</a><a href="#" class="apps__link apps__link_android">Google Play</a><span class="apps__text">и в соцсетях</span><a href="#" class="apps__link apps__link_vk">vkontakte</a><a href="#" class="apps__link apps__link_ok">одноклассники</a></nav>
+        </div>
+        <div class="slide slide_white slide_5">
+          <div class="slide__wrapper">
+            <h1 class="slide__title">Кассир-консультант</h1>
+            <p>Изучи асортимент и будь в теме новинок, оттачивай мастерство на кассе, развивай внимание к деталям и смекалку!</p>
+            <p>Решительность и ловкость – это про тебя? Собери корзину покупателю без единой ошибки!</p><a href="#" class="slide__play">Играть!</a>
+          </div>
+          <nav class="apps apps_dark"><span class="apps__text">Доступно на смартфонах</span><a href="#" class="apps__link apps__link_apple">AppStore</a><a href="#" class="apps__link apps__link_android">Google Play</a><span class="apps__text">и в соцсетях</span><a href="#" class="apps__link apps__link_vk">vkontakte</a><a href="#" class="apps__link apps__link_ok">одноклассники</a></nav>
+        </div>
+        <div class="slide slide_green slide_6">
+          <div class="slide__wrapper">
+            <h1 class="slide__title">Попробуй свои силы уже сейчас!</h1><img src="images/devices.png" alt="Устройства" class="slide__devices"/>
+            <nav class="slide__navigation">
+              <h2 class="slide__subtitle">Играй на смартфоне или в соцсетях:</h2><a href="#" class="slide__link slide__link_appstore">AppStore</a><a href="#" class="slide__link slide__link_googleplay">Google Play</a><a href="#" class="slide__link slide__link_vk">vkontakte</a><a href="#" class="slide__link slide__link_ok">одноклассники</a>
+            </nav>
+          </div>
+        </div>
+        <footer class="footer slide_7 slide_dark">
+          <div class="footer__wrapper">
+            <nav class="footer__navigation"><a href="#" class="footer__link">О нас</a><a href="#" class="footer__link">Вакансии</a><a href="#" class="footer__link">Видео</a><a href="#" class="footer__link">Анкета</a><a href="#" class="footer__link">Истории успеха</a><a href="#" class="footer__link">Контакты</a></nav>
+            <nav class="footer__navigation"><a href="#" class="footer__link">Видео</a><a href="#" class="footer__link">Новости</a></nav>
+            <nav class="footer__social"><a href="#" class="footer__social-link footer__social-link_fb"></a><a href="#" class="footer__social-link footer__social-link_tw"></a><a href="#" class="footer__social-link footer__social-link_vk"></a><a href="#" class="footer__social-link footer__social-link_yt"></a></nav>
+            <p class="footer__copyright">© 2014 Леруа Мерлен.</p>
+          </div>
+        </footer>
+      </div>
+    </div><!--[if IE 8]>
+    <script src="js/jquery/jquery.min.js"></script><![endif]-->
+    <script src="js/velocity/velocity.min.js"></script>
+    <script src="js/scripts.js" async="async" defer="defer"></script>
+  </body>
+</html>
