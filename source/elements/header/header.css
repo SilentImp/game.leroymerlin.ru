@@ -83,14 +83,27 @@
         }
     }
 
-
-
-
-html.limit-600 body .header,
 html.limit-600-900 body .header {
     &__link {
         line-height: 60px;
         font-size: 12px;
+        padding: 0 5px;
+        }
+    &__logotype {
+        width: 60px;
+        height: 60px;
+        background-size: contain;
+        }
+    &__wrapper {
+        height: 60px;
+        line-height: 60px;
+        }
+    }
+
+html.limit-600 body .header {
+    &__link {
+        line-height: 60px;
+        font-size: 10px;
         padding: 0 5px;
         }
     &__logotype {

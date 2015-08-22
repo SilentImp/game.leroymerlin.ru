@@ -63,12 +63,12 @@
                 return;
             }
             this.wheeling = true;
-            if (event.deltaY > 0){
+            if (event.deltaY > 3){
                 this.next();
-            } else if (event.deltaY < 0) {
+            } else if (event.deltaY < -3) {
                 this.prev();
             }
-            setTimeout(()=>{this.wheeling = false;}, 1000);
+            setTimeout(()=>{this.wheeling = false;}, 750);
         }
 
         showVideo () {
@@ -109,6 +109,12 @@
         }
 
         prev () {
+            if (
+                document.body.parentNode.classList.contains('landscape')
+                && document.body.parentNode.classList.contains('limit-500')
+            ) {
+                return;
+            }
             let button = this.current.previousElementSibling;
             if (button != null) {
                 button.click();
@@ -116,6 +122,12 @@
         }
 
         next () {
+            if (
+                document.body.parentNode.classList.contains('landscape')
+                && document.body.parentNode.classList.contains('limit-500')
+            ) {
+                return;
+            }
             let button = this.current.nextElementSibling;
             if (button != null) {
                 button.click();
@@ -124,6 +136,9 @@
 
         rescroll () {
 
+            let slide = document.querySelector('.slide');
+            document.body.parentNode.classList.toggle('landscape', ( window.innerWidth > window.innerHeight));
+            document.body.parentNode.classList.toggle('limit-500', (slide.offsetHeight <= 500));
             document.body.parentNode.classList.toggle('limit-600', (Modernizr.mq('(max-height: 600px)')));
             document.body.parentNode.classList.toggle('limit-600-900', (Modernizr.mq('(min-height: 601px) and (max-height: 900)')));
 

@@ -139,7 +139,7 @@
                 }
             &__title{
                 font-family: 'PF Din Bold';
-                margin: 60px 0 0;
+                margin: 90px 0 0;
                 color: $black;
                 font-size: 50px;
                 line-height: 61px;
@@ -240,7 +240,7 @@
                     position: absolute;
                     top: 50%;
                     right: 50%;
-                    margin: -331px 50px 0 0;
+                    margin: -260px 50px 0 0;
                     }
                 }
             &__list {
@@ -389,6 +389,11 @@
 
 @media (min-width: 501px) and (max-width: 850px) {
     html body .slide {
+        &_3,
+        &_4,
+        &_5 {
+            padding: 0 30px 0 180px;
+            }
         &__screen {
             top: 90px;
             }
@@ -484,6 +489,12 @@
                     top: 10px;
                     }
                 }
+            }
+
+        &_2,
+        &_3,
+        &_4 {
+            padding: 0 30px 0 90px;
             }
 
         &_2,
@@ -781,6 +792,11 @@ html.limit-600 body .slide {
 
 @media (min-height: 601px) and (max-height: 900px) {
     html body .slide {
+        &_1 .slide{
+            &__title {
+                margin-top: 90px;
+                }
+            }
         &_6 .slide{
             &__subtitle {
                 font-size: 16px;

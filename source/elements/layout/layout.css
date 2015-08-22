@@ -18,3 +18,68 @@ html {
             }
         }
     }
+
+
+@media (max-device-height: 500px) {
+    html body {
+        .paginator,
+        .social,
+        .page {
+            display: none;
+            }
+        .blocker {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 11;
+            background: $gold url(../images/turn.svg) 50% 70% no-repeat;
+            background-size: calc(100vh - 150px) auto;
+            }
+        }
+    }
+
+
+html.landscape.limit-500 body{
+    background: $gold;
+    .paginator,
+    .header,
+    .social,
+    .page {
+        display: none;
+        }
+    .blocker {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 11;
+        background: $gold url(../images/turn.svg) 50% 50% no-repeat;
+        background-size: 150px 150px;
+        }
+    }
+
+
+@media (orientation: landscape) and (max-height: 500px) {
+    html body {
+        background: $gold;
+        .paginator,
+        .header,
+        .social,
+        .page {
+            display: none;
+            }
+        .blocker {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 11;
+            background: $gold url(../images/turn.svg) 50% 50% no-repeat;
+            background-size: 150px 150px;
+            }
+        }
+    }

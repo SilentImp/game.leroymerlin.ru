@@ -1,0 +1,26 @@
+@import "../../helpers/*.css";
+
+.road{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin-left: 5px;
+    width: 120px;
+    background: #38aace linear-gradient(to bottom, #38aace 0,  #38aace 50%, #4e9bc6 50%, #4e9bc6 100%); ;
+    background-size: 100% 20vh;
+    border-left: dotted 4px #376699;
+    border-right: dotted 4px #376699;
+    background-clip: content-box;
+
+    animation: road 1.6s infinite linear;
+    }
+
+@keyframes road {
+    from {
+        background-position: 0 0;
+        }
+    to {
+        background-position: 0 20vh;
+        }
+    }
