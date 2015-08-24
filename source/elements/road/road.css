@@ -1,5 +1,125 @@
 @import "../../helpers/*.css";
 
+.gear {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background: url(../images/gear.svg) 50% 50% no-repeat;
+    animation: time 1s infinite linear;
+    transform-origin: 50% 50%;
+    &_1 {
+        right: 75%;
+        top: 170px;
+        z-index: 10;
+        margin-right: 18px;
+        }
+
+    &_2 {
+        right: 75%;
+        top: 170px;
+        z-index: 10;
+        margin-right: 109px;
+        }
+
+    &_3 {
+        right: 75%;
+        top: 170px;
+        z-index: 10;
+        margin-right: 200px;
+        }
+
+    &_4 {
+        right: 75%;
+        top: 170px;
+        z-index: 10;
+        margin-right: 154px;
+        }
+
+    &_5 {
+        right: 75%;
+        top: 170px;
+        z-index: 10;
+        margin-right: 64px;
+        }
+
+
+
+    &_6 {
+        right: 75%;
+        top: 386px;
+        z-index: 13;
+        margin-right: 86px;
+        }
+
+    &_7 {
+        right: 75%;
+        top: 386px;
+        z-index: 10;
+        margin-right: 177px;
+        }
+
+    &_8 {
+        right: 75%;
+        top: 386px;
+        z-index: 10;
+        margin-right: 268px;
+        }
+
+    &_9 {
+        right: 75%;
+        top: 386px;
+        z-index: 10;
+        margin-right: 222px;
+        }
+
+    &_10 {
+        right: 75%;
+        top: 386px;
+        z-index: 10;
+        margin-right: 132px;
+        }
+    }
+
+.clock {
+    position: absolute;
+    left: 50px;
+    top: 200vh;
+    z-index: -1;
+    margin: 20px 0 0;
+    &__arrow-1 {
+        width: 4px;
+        height: 24px;
+        background-color: #42F4F4;
+        border-radius: 2px;
+
+        position: absolute;
+        top: 200vh;
+        left: 91px;
+
+        margin: 150px 0 0 -2px;
+        z-index: 3;
+
+        transform-origin: 50% 2px;
+        animation: time 20s infinite linear;
+        }
+    &__arrow-2 {
+        width: 4px;
+        height: 24px;
+        background-color: #31BBDB;
+        border-radius: 2px;
+
+        position: absolute;
+        top: 200vh;
+        left: 91px;
+
+        margin: 150px 0 0 -2px;
+        z-index: 4;
+
+        transform-origin: 50% 2px;
+        animation: time 10s infinite linear;
+        }
+    }
+
 .road{
     position: absolute;
     top: 0;
@@ -7,13 +127,98 @@
     left: 0;
     margin-left: 5px;
     width: 120px;
-    background: #38aace linear-gradient(to bottom, #38aace 0,  #38aace 50%, #4e9bc6 50%, #4e9bc6 100%); ;
+    background: #38aace linear-gradient(to bottom, #38aace 0,  #38aace 50%, #4e9bc6 50%, #4e9bc6 100%);
     background-size: 100% 20vh;
     border-left: dotted 4px #376699;
     border-right: dotted 4px #376699;
     background-clip: content-box;
 
-    animation: road 1.6s infinite linear;
+    animation: road 1.55s infinite linear;
+    }
+
+.bag {
+    background: url(../images/bag.svg) 0 0 no-repeat;
+    width: 84px;
+    height: 133px;
+
+    position: absolute;
+    top: 275vh;
+    left: 25%;
+
+    transform: translateZ(6px);
+
+    margin: -40px 0 0 -10px;
+    z-index: 20;
+    }
+
+.stars-from-bag {
+    position: absolute;
+    top: 275vh;
+    left: 25%;
+    margin: -65px 0 0 -10px;
+    z-index: 21;
+
+    transform: translateZ(7px);
+    .n1{
+        transform-origin: 50% 50%;
+        animation: pulse .9s .3s infinite;
+        }
+    .n2{
+        transform-origin: 50% 50%;
+        animation: pulse .9s .6s infinite;
+        }
+    .n3{
+        transform-origin: 50% 50%;
+        animation: pulse .9s infinite;
+        }
+    }
+
+.road-2{
+    position: absolute;
+    top: 0;
+    bottom: 25vh;
+    left: 25%;
+    width: 60px;
+    background: #38aace linear-gradient(to bottom, #38aace 0,  #38aace 50%, #4e9bc6 50%, #4e9bc6 100%);
+    background-size: 100% 10vh;
+    border-left: dotted 4px #376699;
+    border-right: dotted 4px #376699;
+    background-clip: content-box;
+
+    animation: road 2s infinite linear;
+
+    &:after {
+        content: "";
+        display: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background: linear-gradient(to bottom, color(color(#4e9bc6 l(-25%)) a(0%)) 0, color(color(#4e9bc6 l(-25%)) a(100%)) 100%);
+        mix-blend-mode: multiply;
+        }
+    }
+
+@keyframes pulse {
+    from {
+        transform: scale(0);
+        }
+    50% {
+        transform: scale(1);
+        }
+    to {
+        transform: scale(0);
+        }
+    }
+
+@keyframes time {
+    from {
+        transform: rotate(0);
+        }
+    to {
+        transform: rotate(360deg);
+        }
     }
 
 @keyframes road {
@@ -24,3 +229,15 @@
         background-position: 0 20vh;
         }
     }
+
+@media (max-width: 500px) {
+    html.csstransforms3d.cssanimations body .road {
+        margin-left: -60px;
+        }
+}
+
+/*@media (min-width: 850px) and (max-width: 1360px) {
+    html.csstransforms3d.cssanimations body .road {
+        margin-left: -60px;
+        }
+}*/

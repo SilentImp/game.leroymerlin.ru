@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="84px" height="133px" viewBox="0 0 84 133" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>bag</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Screen_5" sketch:type="MSArtboardGroup" transform="translate(-407.000000, -517.000000)">
+            <g id="illustration" sketch:type="MSLayerGroup" transform="translate(-5.000000, 100.000000)">
+                <g id="bag" transform="translate(412.000000, 419.000000)" sketch:type="MSShapeGroup">
+                    <path d="M83.498,121.654 C83.498,126.673 79.428,130.743 74.408,130.743 L18.359,130.743 C13.34,130.743 9.27,126.673 9.27,121.654 L9.27,38.338 C9.27,33.318 13.34,29.249 18.359,29.249 L74.408,29.249 L83.402,29.249 L83.498,121.654 L83.498,121.654 Z" id="Fill-1" fill="#72B56C"></path>
+                    <path d="M13.959,31.361 C13.959,31.361 17.397,0.79 35.883,1.791 C53.639,2.751 56.217,27.773 55.293,30.771" id="Stroke-8" stroke="#A4D7A4" stroke-width="4"></path>
+                    <path d="M25.4336,29.821 C25.4336,29.821 28.2716,-0.048 46.7576,0.95 C64.5136,1.91 67.0916,26.933 66.1676,29.931" id="Stroke-9" stroke="#A4D7A4" stroke-width="4"></path>
+                    <path d="M74.6602,121.654 C74.6602,126.673 70.5922,130.743 65.5722,130.743 L9.5232,130.743 C4.5042,130.743 0.4332,126.673 0.4332,121.654 L0.4332,29.438 C5.1032,29.438 70.5252,29.342 74.5972,29.342 L74.6602,121.654 L74.6602,121.654 Z" id="Fill-10" fill="#8CF394"></path>
+                    <path d="M26.8467,76.173 L38.1467,67.194 L46.9847,76.391 L26.8467,76.173 L26.8467,76.173 Z" id="Fill-13" fill="#18B557"></path>
+                    <path d="M71.0596,119.571 C71.0596,121.233 69.9646,122.579 68.6156,122.579 C67.2656,122.579 66.1716,121.233 66.1716,119.571 L66.1716,39.228 C66.1716,37.567 67.2656,36.221 68.6156,36.221 C69.9646,36.221 71.0596,37.567 71.0596,39.228 L71.0596,119.571 L71.0596,119.571 Z" id="Fill-14" fill="#6FE078"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

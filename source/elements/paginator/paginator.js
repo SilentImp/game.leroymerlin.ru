@@ -33,6 +33,29 @@
             this.video = document.querySelector('.slide__screen');
             this.hide_video = document.querySelector('.slide__screen-close');
             this.scrolling = false;
+            this.navigation = document.querySelector('.header__navigation');
+            this.loca = document.querySelector('.header__options');
+
+            this.vh = document.querySelector('.vh');
+            window.addEventListener('resize', this.resizeAll.bind(this));
+            this.resizeAll();
+
+            let burger = document.querySelector('.header__burger');
+            burger.addEventListener('click', this.openNavigation.bind(this));
+
+            let close = document.querySelector('.header__close');
+            close.addEventListener('click', this.closeNavigation.bind(this));
+
+            let close_location = document.querySelector('.header__close-location');
+            close_location.addEventListener('click', this.closeLocation.bind(this));
+
+            let open_location = document.querySelector('.header__open-location');
+            open_location.addEventListener('click', this.openLocation.bind(this));
+
+            let buttons = document.querySelectorAll('.slide__play');
+            [].forEach.call(buttons, (button) => {
+                button.addEventListener('click', this.scrollToLinks.bind(this));
+            });
 
             let paginator_links = this.paginator.querySelectorAll('.paginator__slide');
             [].forEach.call(paginator_links, (link) => {
@@ -48,8 +71,6 @@
             this.show_video.addEventListener('click', this.showVideo.bind(this));
             this.hide_video.addEventListener('click', this.hideVideo.bind(this));
 
-            this.rescroll();
-
             if (document.body.parentNode.classList.contains('touch')) {
                 let hammertime = new Hammer(this.page);
                 hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
@@ -58,14 +79,90 @@
             }
         }
 
+        resizeAll () {
+
+            let slides = document.querySelectorAll('.slide')
+                , scenes = document.querySelectorAll('.scene')
+                , delta;
+
+            [].forEach.call(slides, (slide) => {
+                slide.style.height = this.vh.offsetHeight+'px';
+                slide.style.lineHeight = this.vh.offsetHeight+'px';
+            });
+
+            [].forEach.call(scenes, (scene) => {
+                scene.style.top = 2*this.vh.offsetHeight+'px';
+                scene.style.height = 3*this.vh.offsetHeight+'px';
+            });
+
+            document.querySelector('.slide_1 .slide__wrapper').style.height = this.vh.offsetHeight+'px';
+
+            if (this.vh.offsetHeight>=900) {
+                delta = 335;
+            }
+
+            if (this.vh.offsetHeight<900) {
+                delta = 435;
+            }
+
+            document.querySelector('.slide__devices').style.maxHeight = (this.vh.offsetHeight - delta)+'px';
+
+            document.querySelector('.stars-from-bag').style.top = 2.75*this.vh.offsetHeight+'px';
+            document.querySelector('.bag').style.top = 2.75*this.vh.offsetHeight+'px';
+            document.querySelector('.clock').style.top = 2*this.vh.offsetHeight+'px';
+            document.querySelector('.clock__arrow-1').style.top = 2*this.vh.offsetHeight+'px';
+            document.querySelector('.clock__arrow-2').style.top = 2*this.vh.offsetHeight+'px';
+
+
+            this.rescroll();
+        }
+
+
+        closeLocation () {
+            Velocity(this.loca, "stop");
+            Velocity(this.loca, {
+                top: -this.vh.offsetHeight*2+'px'
+            }, {
+                duration: 500
+            });
+        }
+
+        openLocation () {
+            Velocity(this.loca, "stop");
+            Velocity(this.loca, {
+                top: 0
+            }, {
+                duration: 500
+            });
+        }
+
+
+        closeNavigation () {
+            Velocity(this.navigation, "stop");
+            Velocity(this.navigation, {
+                top: -this.vh.offsetHeight*2+'px'
+            }, {
+                duration: 500
+            });
+        }
+
+        openNavigation () {
+            Velocity(this.navigation, "stop");
+            Velocity(this.navigation, {
+                top: 0
+            }, {
+                duration: 500
+            });
+        }
+
         wheelController (event) {
             if (this.wheeling == true){
                 return;
             }
             this.wheeling = true;
-            if (event.deltaY > 3){
+            if (event.deltaY > 1){
                 this.next();
-            } else if (event.deltaY < -3) {
+            } else if (event.deltaY < -1) {
                 this.prev();
             }
             setTimeout(()=>{this.wheeling = false;}, 750);
@@ -135,13 +232,10 @@
         }
 
         rescroll () {
-
-            let slide = document.querySelector('.slide');
-            document.body.parentNode.classList.toggle('landscape', ( window.innerWidth > window.innerHeight));
-            document.body.parentNode.classList.toggle('limit-500', (slide.offsetHeight <= 500));
-            document.body.parentNode.classList.toggle('limit-600', (Modernizr.mq('(max-height: 600px)')));
-            document.body.parentNode.classList.toggle('limit-600-900', (Modernizr.mq('(min-height: 601px) and (max-height: 900)')));
-
+            document.body.parentNode.classList.toggle('landscape', ( this.vh.offsetWidth > this.vh.offsetHeight));
+            document.body.parentNode.classList.toggle('limit-500', (this.vh.offsetHeight <= 500));
+            document.body.parentNode.classList.toggle('limit-600', (this.vh.offsetHeight <= 600 ));
+            document.body.parentNode.classList.toggle('limit-600-900', (this.vh.offsetHeight > 600)&&(this.vh.offsetHeight<=900));
 
             let button = this.current;
             if (button != null) {
@@ -151,26 +245,27 @@
 
         checkState () {
             let top = Math.abs(parseInt(this.page.style.top, 10))
-                // , viewport_height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
-                , viewport_height = document.querySelector('.slide').offsetHeight
-                , distance = top - (this.page.offsetHeight - viewport_height - this.footer.offsetHeight)
-                , distance_long = top - (this.page.offsetHeight - 2*viewport_height - this.footer.offsetHeight);
+                , distance = top - (this.page.offsetHeight - this.vh.offsetHeight - this.footer.offsetHeight)
+                , distance_long = top - (this.page.offsetHeight - 2*this.vh.offsetHeight - this.footer.offsetHeight);
 
             if(distance > 0) {
-                this.social.classList.toggle('social_fixed', true);
                 this.social.style.bottom = distance + "px";
-                if(viewport_height >= 900) {
+                if(this.vh.offsetHeight >= 900) {
                     this.paginator.style.marginTop = (-this.paginator.offsetHeight/2 - distance) + "px";
                 }
             } else {
-                this.social.classList.toggle('social_fixed', false);
                 this.social.removeAttribute('style');
-                if(viewport_height >= 900) {
+                if(this.vh.offsetHeight >= 900) {
                     this.paginator.removeAttribute('style');
                 }
             }
 
             window.requestAnimationFrame(this.checkStateBind);
+        }
+
+        scrollToLinks (event) {
+            event.preventDefault();
+            document.querySelector('[data-slide="6"]').click();
         }
 
         scrollToSlide (event) {
@@ -185,9 +280,7 @@
                 , id = parseInt(link.getAttribute('data-slide'), 10) - 1
                 , diff = Math.abs(old_id - (id + 1))
                 , slide = document.querySelector('.slide_' + (id+1))
-                // , viewport_height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
-                , viewport_height = document.querySelector('.slide').offsetHeight
-                , target = Math.min(viewport_height * id, this.page.offsetHeight - viewport_height);
+                , target = Math.min(this.vh.offsetHeight * id, this.page.offsetHeight - this.vh.offsetHeight);
 
             this.current.classList.remove('paginator__slide_current');
             this.current = link;

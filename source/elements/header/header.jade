@@ -2,9 +2,51 @@ header.header
     .header__wrapper
         a(href="/")
             h1.header__logotype Leroy Merlin
+        button.header__burger(type="button")
+        button.header__open-location(type="button")
+        nav.header__location    
+            .header__location-current Набережные Челны
+            .header__options
+                button.header__close-location(type="button")
+                ul.header__column
+                    li: a(href="#") Зеленоград
+                    li: a(href="#") Барнаул
+                    li: a(href="#") Волгоград
+                    li: a(href="#") Воронеж
+                    li: a(href="#") Екатеринбург
+                    li: a(href="#") Зеленоград
+                    li: a(href="#") Иркутск
+                    li: a(href="#") Казань
+                    li: a(href="#") Кемерово
+                    li: a(href="#") Кострома
+                    li: a(href="#") Краснодар
+                    li: a(href="#") Красноярск
+                    li: a(href="#") Москва
+                    li.selected: a(href="#") Набережные Челны
+                    li: a(href="#") Новокузнецк
+                    li: a(href="#") Новосибирск
+                ul.header__column
+                    li: a(href="#") Одинцово
+                    li: a(href="#") Омск
+                    li: a(href="#") Пенза
+                    li: a(href="#") Ростов-на-Дону
+                    li: a(href="#") Рязань
+                    li: a(href="#") Самара
+                    li: a(href="#") Санкт-Петербург
+                    li: a(href="#") Тверь
+                    li: a(href="#") Тула
+                    li: a(href="#") Тюмень
+                    li: a(href="#") Уфа
+                    li: a(href="#") Хабаровск
+                    li: a(href="#") Челябинск
+                    li: a(href="#") Ярославль
+                    
+                .header__column
         nav.header__navigation
-            a.header__link(href="#") О нас
-            a.header__link(href="#") Видео
-            a.header__link(href="#") Игра
-            a.header__link(href="#") Вакансии
-            a.header__link(href="#") Контакты
+            button.header__close(type="button")
+            .header__navigation-wrapper
+                a.header__link(href="#") О нас
+                a.header__link(href="#") Видео
+                a.header__link(href="#") Игра
+                a.header__link(href="#") Вакансии
+                a.header__link(href="#") Контакты

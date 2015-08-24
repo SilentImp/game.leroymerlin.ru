@@ -19,6 +19,9 @@
         .apps {
             &__link {
                 color: $green;
+                &:hover {
+                    border-color: $green;
+                    }
                 }
             }
         }
@@ -46,7 +49,10 @@
         position: relative;
         font-weight: 200;
         color: $white;
-        transition: color .25s;
+        transition: color .25s, border-color .25s;
+        &:hover {
+            border-color: $white;
+            }
         &:before {
             position: absolute;
             top: 0;
@@ -80,7 +86,7 @@
         }
     }
 
-@media (max-width: 1360px) {
+/*@media (max-width: 1360px) {*/
     html body .apps {
         left: 33%;
         &_center {
@@ -88,21 +94,7 @@
             transform: translateX(-50%);
             }
         }
-    }
-
-
-@media (max-width: 1360px) {
-    html body .apps {
-        left: 0;
-        right: 0;
-        text-align: center;
-        &_center {
-            left: 0;
-            transform: none;
-            }
-        }
-    }
-
+    /*}*/
 
 @media (max-width: 850px) {
     html body .apps {
