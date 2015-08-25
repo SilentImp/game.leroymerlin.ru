@@ -73,7 +73,7 @@
 
             if (document.body.parentNode.classList.contains('touch')) {
                 let hammertime = new Hammer(this.page);
-                hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+                hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
                 hammertime.on('swipeup', this.next.bind(this));
                 hammertime.on('swipedown', this.prev.bind(this));
             }
@@ -83,6 +83,7 @@
 
             let slides = document.querySelectorAll('.slide')
                 , scenes = document.querySelectorAll('.scene')
+                , road = document.querySelector('.road-2')
                 , delta;
 
             [].forEach.call(slides, (slide) => {
@@ -92,7 +93,13 @@
 
             [].forEach.call(scenes, (scene) => {
                 scene.style.top = 2*this.vh.offsetHeight+'px';
-                scene.style.height = 3*this.vh.offsetHeight+'px';
+
+                if (this.vh.offsetWidth > 850) {
+                    road.style.height = (3*this.vh.offsetHeight-102)+'px';
+                    scene.style.height = (3*this.vh.offsetHeight-102)+'px';
+                } else {
+                    scene.style.height = 3*this.vh.offsetHeight+'px';
+                }
             });
 
             document.querySelector('.slide_1 .slide__wrapper').style.height = this.vh.offsetHeight+'px';
@@ -108,7 +115,9 @@
             document.querySelector('.slide__devices').style.maxHeight = (this.vh.offsetHeight - delta)+'px';
 
             document.querySelector('.stars-from-bag').style.top = 2.75*this.vh.offsetHeight+'px';
-            document.querySelector('.bag').style.top = 2.75*this.vh.offsetHeight+'px';
+
+            document.querySelector('.bag').style.top = (2.75*this.vh.offsetHeight - 31)+'px';
+
             document.querySelector('.clock').style.top = 2*this.vh.offsetHeight+'px';
             document.querySelector('.clock__arrow-1').style.top = 2*this.vh.offsetHeight+'px';
             document.querySelector('.clock__arrow-2').style.top = 2*this.vh.offsetHeight+'px';
@@ -156,16 +165,11 @@
         }
 
         wheelController (event) {
-            if (this.wheeling == true){
-                return;
-            }
-            this.wheeling = true;
-            if (event.deltaY > 1){
+            if (event.deltaY > 0){
                 this.next();
-            } else if (event.deltaY < -1) {
+            } else if (event.deltaY < 0) {
                 this.prev();
             }
-            setTimeout(()=>{this.wheeling = false;}, 750);
         }
 
         showVideo () {
@@ -206,12 +210,6 @@
         }
 
         prev () {
-            if (
-                document.body.parentNode.classList.contains('landscape')
-                && document.body.parentNode.classList.contains('limit-500')
-            ) {
-                return;
-            }
             let button = this.current.previousElementSibling;
             if (button != null) {
                 button.click();
@@ -219,12 +217,6 @@
         }
 
         next () {
-            if (
-                document.body.parentNode.classList.contains('landscape')
-                && document.body.parentNode.classList.contains('limit-500')
-            ) {
-                return;
-            }
             let button = this.current.nextElementSibling;
             if (button != null) {
                 button.click();

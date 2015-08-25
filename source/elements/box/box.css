@@ -486,23 +486,29 @@ html.csstransforms3d.cssanimations body{
 
 @keyframes container {
     from {
-        top: -120px
+        top: -120px;
+        left: 25%;
         }
     50% {
         top: 150vh;
+        left: 25%;
         }
     53% {
         opacity: 1;
+        left: 25%;
         }
     55% {
+        left: 25%;
         top: 150vh;
         opacity: 0;
         }
     56% {
         top: 0;
+        left: -9999px;
         visibility: hidden;
         }
     100% {
+        left: -9999px;
         opacity: 0;
         }
     }
